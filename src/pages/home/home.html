@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <span class="dash-title">Dashboard</span>
+      <img class="circle-pic right" src="./assets/imgs/aliantonio.jpg">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing..."></ion-refresher-content>
+  </ion-refresher>
+    
+  <ion-card>
+    <!--<ion-card-header>
+      Explore Nearby
+    </ion-card-header>-->
+  
+    <ion-list>
+
+      <button ion-item>
+        <ion-icon name="desktop" item-start></ion-icon>
+        <ion-label>Computer</ion-label>
+        <ion-toggle [(ngModel)]="isPoweredOn" (ngModelChange)="toggleCpu()"></ion-toggle>
+      </button>
+  
+      <button ion-item (click)="showTraffic()">
+        <ion-icon name="map" item-start></ion-icon>
+        <ion-label>Current Traffic</ion-label>
+      </button>
+  
+    </ion-list>
+  </ion-card>
+
+</ion-content>
