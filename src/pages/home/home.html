@@ -33,6 +33,12 @@
         <ion-label>Current Traffic</ion-label>
       </button>
   
+      <button ion-item>
+        <ion-icon name="key" item-start></ion-icon>
+        <ion-label>VPN</ion-label>
+        <ion-toggle [(ngModel)]="isVpnConnected" (ngModelChange)="toggleVpn()"></ion-toggle>
+      </button>
+  
     </ion-list>
   </ion-card>
 

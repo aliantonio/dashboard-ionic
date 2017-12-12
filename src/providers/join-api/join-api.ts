@@ -20,6 +20,12 @@ export class JoinApiProvider {
         this.toast.showToast('Turning on computer...');
       } else if (param == "traffic%20scene") {
         this.toast.showToast('Opening aerial map view...');
+      } else if (param == "turn%20off%20computer") {
+        this.toast.showToast('Turning off computer..');
+      } else if (param == "vpn%20on") {
+        this.toast.showToast('Connecting to VPN...');
+      } else if (param == "vpn%20off") {
+        this.toast.showToast('Disconnecting from VPN...');
       } else {
         this.toast.showToast('Something went wrong. Try again later.');
       }

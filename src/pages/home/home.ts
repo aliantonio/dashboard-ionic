@@ -13,6 +13,7 @@ export class HomePage {
 
   isPoweredOn: boolean = false;
   private alive: boolean = false;
+  isVpnConnected: string = localStorage.getItem('isVpnConnected');
 
   constructor(public navCtrl: NavController, private ping: PingProvider, private load: LoadingProvider, private joinApi: JoinApiProvider) {
   }
@@ -47,10 +48,27 @@ export class HomePage {
     console.log(this.isPoweredOn);
   }
 
+  toggleVpn() {
+    this.isVpnConnected ? this.connectVpn() : this.disconnectVpn();
+    console.log(this.isVpnConnected);
+  }
+
   doRefresh(refresher) {
     console.log('refresh called', refresher);
     this.checkCpuState();
     refresher.complete();
+  }
+
+  private connectVpn() {
+    console.log('connecting to vpn');
+    this.joinApi.push("vpn%20on");
+    localStorage.setItem('isVpnConnected', 'true');
+  }
+
+  private disconnectVpn() {
+    console.log('disconnecting from vpn');
+    this.joinApi.push("vpn%20off");
+    localStorage.setItem('isVpnConnected', 'false');
   }
 
   private turnOff() {
