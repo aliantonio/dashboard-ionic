@@ -26,6 +26,8 @@ export class JoinApiProvider {
         this.toast.showToast('Connecting to VPN...');
       } else if (param == "vpn%20off") {
         this.toast.showToast('Disconnecting from VPN...');
+      } else if (param == "view%20cameras") {
+        this.toast.showToast('Viewing security cameras...');
       } else {
         this.toast.showToast('Something went wrong. Try again later.');
       }

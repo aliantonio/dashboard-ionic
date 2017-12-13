@@ -16,9 +16,9 @@
   </ion-refresher>
     
   <ion-card>
-    <!--<ion-card-header>
-      Explore Nearby
-    </ion-card-header>-->
+    <ion-card-header>
+      Home
+    </ion-card-header>
   
     <ion-list>
 
@@ -28,15 +28,29 @@
         <ion-toggle [(ngModel)]="isPoweredOn" (ngModelChange)="toggleCpu()"></ion-toggle>
       </button>
   
-      <button ion-item (click)="showTraffic()">
-        <ion-icon name="map" item-start></ion-icon>
-        <ion-label>Current Traffic</ion-label>
+      <button ion-item (click)="viewSecurityCameras()">
+        <ion-icon name="videocam" item-start></ion-icon>
+        <ion-label>Security Cameras</ion-label>
       </button>
-  
+
       <button ion-item>
         <ion-icon name="key" item-start></ion-icon>
         <ion-label>VPN</ion-label>
         <ion-toggle [(ngModel)]="isVpnConnected" (ngModelChange)="toggleVpn()"></ion-toggle>
+      </button>
+  
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-card-header>
+        Maps
+      </ion-card-header>
+
+      <button ion-item (click)="showTraffic()">
+        <ion-icon name="map" item-start></ion-icon>
+        <ion-label>Current Traffic</ion-label>
       </button>
   
     </ion-list>

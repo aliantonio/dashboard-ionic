@@ -32,11 +32,11 @@
     background-color: #303030 !important;
 }
 
-.item-md {
+.item-md, .card-header-md {
     background-color: #424242 !important;
 }
 
-.refresher-pulling-icon, .refresher-refreshing-icon, .refresher-pulling-text, .refresher-refreshing-text,
+.refresher-pulling-icon, .refresher-refreshing-icon, .refresher-pulling-text, .refresher-refreshing-text, .card-header-md,
 .toolbar-title-md, .item-md, .content-md, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
     color: #fff !important;
 }

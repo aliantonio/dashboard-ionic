@@ -59,6 +59,11 @@ export class HomePage {
     refresher.complete();
   }
 
+  viewSecurityCameras() {
+    console.log('opening security cam application');
+    this.joinApi.push("view%20cameras");
+  }
+
   private connectVpn() {
     console.log('connecting to vpn');
     this.joinApi.push("vpn%20on");
