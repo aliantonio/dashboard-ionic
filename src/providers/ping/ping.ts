@@ -12,7 +12,7 @@ export class PingProvider {
 
   ping() {
     return this.http.get('https://asliantonio.com/dashboard/pingserver.php')
-      .timeout(10000)
+      .timeout(5000)
       .do(this.logResponse)
       .map(this.extractData)
       .catch(this.catchError);
