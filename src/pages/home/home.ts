@@ -28,7 +28,12 @@ export class HomePage {
     this.ping.ping()
       .subscribe((data) => {
         console.log(data);
-        this.isPoweredOn = true;
+        if (data.status == "success") {
+          this.isPoweredOn = true;
+        } else {
+          console.error("Successful call but couldn't connect to port. Computer is likely turned off.");
+          this.isPoweredOn = false;
+        }
         this.load.hide();
       },
       err => {
