@@ -83,7 +83,7 @@ export class HomePage {
 
   private turnOff() {
     console.log("turning off");
-    this.joinApi.push("turn%20off%20computer");
+    this.joinApi.push("plexOff");
     this.isPoweredOn = false;
   }
   
