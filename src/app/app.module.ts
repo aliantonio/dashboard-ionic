@@ -13,6 +13,7 @@ import { PingProvider } from '../providers/ping/ping';
 import { LoadingProvider } from '../providers/loading/loading';
 import { JoinApiProvider } from '../providers/join-api/join-api';
 import { ToastProvider } from '../providers/toast/toast';
+import { CheckMaintStatusProvider } from '../providers/check-maint-status/check-maint-status';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ToastProvider } from '../providers/toast/toast';
     PingProvider,
     LoadingProvider,
     JoinApiProvider,
-    ToastProvider
+    ToastProvider,
+    CheckMaintStatusProvider
   ]
 })
 export class AppModule {}

@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      <span class="dash-title">Dashboard</span>
+      <span class="dash-title">Anthony's Dashboard</span>
       <img class="circle-pic right" src="./assets/imgs/aliantonio.jpg">
     </ion-title>
   </ion-navbar>
@@ -17,35 +17,67 @@
     
   <ion-card>
     <ion-card-header>
-      Home
+      Plex
     </ion-card-header>
   
     <ion-list>
 
       <button ion-item>
         <ion-icon name="desktop" item-start></ion-icon>
-        <ion-label>Computer</ion-label>
+        <ion-label>Office Computer</ion-label>
         <ion-toggle [(ngModel)]="isPoweredOn" (ngModelChange)="toggleCpu()"></ion-toggle>
       </button>
   
-      <button ion-item (click)="viewSecurityCameras()">
-        <ion-icon name="videocam" item-start></ion-icon>
-        <ion-label>Security Cameras</ion-label>
+      <button ion-item>
+        <ion-icon name="construct" item-start></ion-icon>
+        <ion-label>Plex Under Maintenance</ion-label>
+        <ion-toggle [(ngModel)]="isUnderMaintenance" (ngModelChange)="toggleMaintStatus()"></ion-toggle>
       </button>
 
-      <button ion-item>
+      <button ion-item (click)="openTautulli()">
+        <ion-icon name="analytics" item-start></ion-icon>
+        <ion-label>Tautulli</ion-label>
+      </button>
+
+<!--      <button ion-item>
         <ion-icon name="key" item-start></ion-icon>
         <ion-label>VPN</ion-label>
         <ion-toggle [(ngModel)]="isVpnConnected" (ngModelChange)="toggleVpn()"></ion-toggle>
-      </button>
+      </button>-->
   
     </ion-list>
   </ion-card>
 
   <ion-card>
+    <ion-card-header>
+      Security Cameras
+    </ion-card-header>
+
+    <ion-list>
+
+      <button ion-item (click)="viewSecurityCameras()">
+        <ion-icon name="videocam" item-start></ion-icon>
+        <ion-label>Liantonio Cameras</ion-label>
+      </button>
+
+      <button ion-item (click)="czechCameras()">
+        <ion-icon name="videocam" item-start></ion-icon>
+        <ion-label>Czech Cameras</ion-label>
+      </button>
+
+      <button ion-item (click)="acconzoCameras()">
+        <ion-icon name="videocam" item-start></ion-icon>
+        <ion-label>Acconzo Cameras</ion-label>
+      </button>
+
+    </ion-list>
+
+  </ion-card>
+
+  <ion-card>
     <ion-list>
       <ion-card-header>
-        Maps
+        Work
       </ion-card-header>
 
       <button ion-item (click)="showTraffic()">

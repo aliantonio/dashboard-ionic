@@ -19,25 +19,11 @@ export class JoinApiProvider {
     // Successful responses call the first callback.
     data => {
       console.log(data);
-      if (param == "plex%20request") {
-        this.toast.showToast('Turning on computer...');
-      } else if (param == "traffic%20scene") {
-        this.toast.showToast('Opening aerial map view...');
-      } else if (param == "plexOff") {
-        this.toast.showToast('Turning off computer..');
-      } else if (param == "vpn%20on") {
-        this.toast.showToast('Connecting to VPN...');
-      } else if (param == "vpn%20off") {
-        this.toast.showToast('Disconnecting from VPN...');
-      } else if (param == "view%20cameras") {
-        this.toast.showToast('Viewing security cameras...');
-      } else {
-        this.toast.showToast('Something went wrong. Try again later.');
-      }
     },
     // Errors will call this callback instead:
     err => {
       console.error(err);
+      this.toast.showToast('Something went wrong. Try again later.');
     });
   
   }
