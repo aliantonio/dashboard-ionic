@@ -8,7 +8,8 @@ export class JoinApiProvider {
   constructor(public http: HttpClient, private toast: ToastProvider) { }
 
   push(param: string, args?: any) {
-    let deviceId = 'f70f80282ea741f190b8d80d9388f460'; // pixel 3
+    //let deviceId = 'f70f80282ea741f190b8d80d9388f460'; // pixel 3
+    let deviceId = 'b4fe0a42201a42898229bfbda9b6fe5f'; // pixel 5 beta 2
     let apiKey = '36daccd47ff14aa385a36d425ab4bc13';
     if (args == undefined || args == "" || args == "undefined") {
       args = "";
